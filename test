@@ -1,0 +1,23 @@
+class person:
+    def __init__(self,name,id):
+        self.name=name
+        self.id=id
+    def hello():# 实例方法
+      print("person")
+    @staticmethod# 静态方法
+    def sinfo(name,add):
+        print(name,add)
+    @classmethod#
+    def cinfo():# 类方法
+        print("正在调用类方法")
+
+class child(person):
+   flag ="child" #类属性
+   def __init__(self,name,id,age):
+        super(). __init__(self,name,id)
+        self.age = age # 实例属性
+   def hello():
+      print("child")
+
+child=child("bigc","1000101", 1)
+child1=child("bigc1","10001011", 1)
