@@ -12,8 +12,36 @@
 #   1. 设立一个总部和三个分校区
 #   2. 查看任意校区的员工数量，教师数量，学生数量
 #   3. 查看任意校区的收入
-class campus:
-    pass
+class Center:
+
+    def __init__(self):
+        pass
+
+
+class Campus:
+    Cam_list = {}
+
+    def __init__(self, name):
+        self.name = name
+        self.officer_num = 0
+        self.teacher_num = 0
+        self.student_num = 0
+        self.count = 0
+        self.id = len(Campus.Cam_list)
+        Campus.Cam_list.update({self.id, self})
+
+    def get_num_off(self):
+        return self.officer_num
+
+    def get_num_tea(self):
+        return self.teacher_num
+
+    def get_num_stu(self):
+        return self.student_num
+
+    def get_count(self):
+        return self.count
+
 
 # 4. 课程模块
 #   1. 添加新课程，输入基本信息（名称，价格，校区）
@@ -98,7 +126,4 @@ class Officer(Person):
         super.__init__(name, 0, campus)
         self.id = id
         self.list_id = len(Officer.off_list)
-        Officer.off_list.update({self.list_id:self})
-
-
-
+        Officer.off_list.update({self.list_id: self})
